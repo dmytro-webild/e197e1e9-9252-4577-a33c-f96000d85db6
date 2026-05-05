@@ -35,6 +35,7 @@ export default function LandingPage() {
               { name: "About", id: "#about" },
               { name: "Services", id: "#services" },
               { name: "Pricing", id: "#pricing" },
+              { name: "FAQ", id: "#faq" },
               { name: "Contact", id: "#contact" }
             ]}
             brandName="Ethereal Salon"
@@ -168,7 +169,7 @@ export default function LandingPage() {
             background={{ variant: "gradient-bars" }}
             tag="Visit Us"
             title="Schedule Your Visit"
-            description="Ready for a transformation? Get in touch with us to book your appointment."
+            description="Ready for a transformation? Visit us at 123 Salon Way, City Center. Contact us at (555) 123-4567 or email info@etherealsalon.com."
           />
         </div>
 
@@ -179,13 +180,15 @@ export default function LandingPage() {
               {
                 title: "Navigate",                items: [
                   { label: "About", href: "#about" },
-                  { label: "Services", href: "#services" }
+                  { label: "Services", href: "#services" },
+                  { label: "Pricing", href: "#pricing" },
+                  { label: "FAQ", href: "#faq" }
                 ]
               },
               {
-                title: "Legal",                items: [
-                  { label: "Privacy Policy", href: "#" },
-                  { label: "Terms", href: "#" }
+                title: "Support",                items: [
+                  { label: "Contact Us", href: "#contact" },
+                  { label: "Privacy Policy", href: "#" }
                 ]
               }
             ]}
