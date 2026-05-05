@@ -2,17 +2,17 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import { Scissors, Palette, Sparkles, Star, Coffee, Scissors as ScissorIcon, Sparkles as SparkleIcon } from "lucide-react";
-import ContactCTA from '@/components/sections/contact/ContactCTA';
-import FaqBase from '@/components/sections/faq/FaqBase';
-import FeatureCardTwentySeven from '@/components/sections/feature/FeatureCardTwentySeven';
-import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
-import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
-import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
-import PricingCardOne from '@/components/sections/pricing/PricingCardOne';
-import InlineImageSplitTextAbout from '@/components/sections/about/InlineImageSplitTextAbout';
-import TeamCardTen from '@/components/sections/team/TeamCardTen';
-import TestimonialCardSix from '@/components/sections/testimonial/TestimonialCardSix';
+import { Scissors, Palette, Sparkles, Star } from "lucide-react";
+import ContactCenter from '@/components/sections/contact/ContactCenter';
+import FaqDouble from '@/components/sections/faq/FaqDouble';
+import FeatureCardTwentySix from '@/components/sections/feature/FeatureCardTwentySix';
+import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
+import HeroOverlayTestimonial from '@/components/sections/hero/HeroOverlayTestimonial';
+import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
+import PricingCardEight from '@/components/sections/pricing/PricingCardEight';
+import SplitAbout from '@/components/sections/about/SplitAbout';
+import TeamCardEleven from '@/components/sections/team/TeamCardEleven';
+import TestimonialCardFive from '@/components/sections/testimonial/TestimonialCardFive';
 
 export default function LandingPage() {
   return (
@@ -30,118 +30,165 @@ export default function LandingPage() {
     >
       <ReactLenis root>
         <div id="nav" data-section="nav">
-          <NavbarStyleFullscreen
+          <NavbarStyleApple
             navItems={[
               { name: "About", id: "#about" },
               { name: "Services", id: "#services" },
-              { name: "Team", id: "#team" },
               { name: "Pricing", id: "#pricing" },
               { name: "Contact", id: "#contact" }
             ]}
-            brandName="Java Java Brews"
+            brandName="Ethereal Salon"
           />
         </div>
 
         <div id="hero" data-section="hero">
-          <HeroBillboardCarousel
-            title="Style Meets Coffee"
-            description="Where expert hair artistry meets the perfect brew. Discover your new signature look in our cozy, nature-inspired space."
-            background={{ variant: "sparkles-gradient" }}
-            mediaItems={[
-              { imageSrc: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2000", imageAlt: "Modern salon interior" },
-              { imageSrc: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2000", imageAlt: "Artisan coffee brew" }
+          <HeroOverlayTestimonial
+            title="Elevate Your Style"
+            description="Experience premium hair artistry in a serene, nature-inspired setting. Our expert stylists are dedicated to crafting your perfect look."
+            testimonials={[
+              { name: "Sarah Miller", handle: "@sarahstyle", testimonial: "The best salon experience I've ever had. Truly professional.", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/empty-wintertime-luxury-ski-resort_482257-102290.jpg?_wi=1", imageAlt: "luxury hair salon interior" },
+              { name: "James Chen", handle: "@jchen", testimonial: "Exceptional coloring services, very personalized approach.", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/high-angle-books-wooden-chair_23-2149678901.jpg?_wi=1", imageAlt: "luxury hair salon interior" },
+              { name: "Elena Rodriguez", handle: "@elenar", testimonial: "So relaxing and my hair looks amazing!", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/crop-hairdresser-washing-hair-blonde_23-2147769799.jpg?_wi=1", imageAlt: "luxury hair salon interior" },
+              { name: "Marcus Thorne", handle: "@mthorne", testimonial: "Professional, efficient, and very talented stylists.", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/blonde-young-woman-taking-colored-pencil-from-case-wooden-table_23-2147889944.jpg?_wi=1", imageAlt: "luxury hair salon interior" },
+              { name: "Lisa Wang", handle: "@lisaw", testimonial: "A sanctuary for hair care. Simply wonderful.", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/close-up-low-view-man-getting-haircut_23-2148224308.jpg?_wi=1", imageAlt: "luxury hair salon interior" }
+            ]}
+            imageSrc="http://img.b2bpic.net/free-photo/empty-wintertime-luxury-ski-resort_482257-102290.jpg?_wi=2"
+            avatars={[
+              { src: "http://img.b2bpic.net/free-photo/portrait-beautiful-smiling-blond-model-dressed-summer-hipster-clothes-trendy-girl-posing-street-background-funny-positive-woman_158538-5479.jpg", alt: "Portrait of beautiful smiling blond model" },
+              { src: "http://img.b2bpic.net/free-photo/portrait-happy-smiling-middle-aged-woman_169016-26118.jpg", alt: "Portrait of a happy smiling middle aged woman" },
+              { src: "http://img.b2bpic.net/free-photo/portrait-attractive-stylish-blond-smiling-woman-red-blouse-summer-fashion-outfit-wearing-earrings-smiling_285396-8465.jpg", alt: "Portrait of attractive stylish blond smiling woman" },
+              { src: "http://img.b2bpic.net/free-photo/portrait-sensual-curly-woman-smiles-pleasantly-holds-chin-expresses-positive-emotions-keeps-smiling-shows-white-teeth-wears-pink-knitted-sweater-has-beauty-face-healthy-skin-curly-hair_273609-42620.jpg", alt: "Portrait of sensual curly woman smiles pleasantly" },
+              { src: "http://img.b2bpic.net/free-photo/smiling-blonde-woman-applying-mascara-bathroom_329181-1570.jpg", alt: "Smiling blonde woman applying mascara" }
             ]}
           />
         </div>
 
         <div id="about" data-section="about">
-          <InlineImageSplitTextAbout
-            heading={[
-              { type: 'text', content: "Crafting " },
-              { type: 'image', src: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=200", alt: "Salon" },
-              { type: 'text', content: " & Coffee" }
+          <SplitAbout
+            textboxLayout="split"
+            useInvertedBackground={false}
+            title="Our Passion"
+            description="Founded on the principles of artistry and comfort, Ethereal Salon brings world-class hair techniques to our local community with a focus on sustainable beauty practices."
+            bulletPoints={[
+              { title: "Expert Stylists", description: "Years of industry experience." },
+              { title: "Premium Products", description: "Cruelty-free and natural care." },
+              { title: "Personalized Care", description: "Tailored to your hair needs." }
             ]}
-            useInvertedBackground={true}
+            imageSrc="http://img.b2bpic.net/free-photo/high-angle-books-wooden-chair_23-2149678901.jpg?_wi=2"
+            mediaAnimation="slide-up"
           />
         </div>
 
         <div id="services" data-section="services">
-          <FeatureCardTwentySeven
-            animationType="slide-up"
-            textboxLayout="split"
-            title="Our Services"
-            description="We blend the finest hair care with premium coffee experiences."
+          <FeatureCardTwentySix
+            textboxLayout="default"
+            useInvertedBackground={false}
             features={[
-              { id: "1", title: "Artisan Coffee Bar", descriptions: ["Premium roast selection", "Expertly crafted beverages"], imageSrc: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800" },
-              { id: "2", title: "Precision Haircuts", descriptions: ["Modern techniques", "Tailored for your lifestyle"], imageSrc: "https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=800" }
+              { title: "Precision Cuts", description: "Customized styling for every hair texture.", imageSrc: "http://img.b2bpic.net/free-photo/crop-hairdresser-washing-hair-blonde_23-2147769799.jpg?_wi=2", buttonIcon: Scissors },
+              { title: "Advanced Coloring", description: "Vibrant, healthy color transformations.", imageSrc: "http://img.b2bpic.net/free-photo/blonde-young-woman-taking-colored-pencil-from-case-wooden-table_23-2147889944.jpg?_wi=2", buttonIcon: Palette },
+              { title: "Hair Spa", description: "Restorative treatments for scalp health.", imageSrc: "http://img.b2bpic.net/free-photo/close-up-low-view-man-getting-haircut_23-2148224308.jpg?_wi=2", buttonIcon: Sparkles },
+              { title: "Formal Styling", description: "Elegant looks for special occasions.", imageSrc: "http://img.b2bpic.net/free-photo/happy-charming-girl-dressed-black-shine-dress-smiling-living-room_291650-589.jpg", buttonIcon: Star }
             ]}
+            title="Our Expertise"
+            description="Discover a range of professional services designed to rejuvenate your hair and spirit."
           />
         </div>
 
         <div id="team" data-section="team">
-          <TeamCardTen
-            title="Meet The Artists"
-            membersAnimation="slide-up"
-            memberVariant="card"
-            members={[
-              { id: "t1", name: "Alex P. - Head Stylist", imageSrc: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=800" },
-              { id: "t2", name: "Jordan S. - Lead Barista", imageSrc: "https://images.unsplash.com/photo-1610337673044-7104e1cce54d?q=80&w=800" }
+          <TeamCardEleven
+            animationType="slide-up"
+            textboxLayout="default"
+            useInvertedBackground={false}
+            groups={[
+              {
+                id: "creative",                groupTitle: "Artistic Team",                members: [
+                  {
+                    id: "m1",                    title: "Lead Stylist",                    subtitle: "Specialist in cuts",                    detail: "10 years experience",                    imageSrc: "http://img.b2bpic.net/free-photo/studio-portrait-blonde-female-dressed-white-t-shirt-waistcoat-grey-background_613910-9333.jpg"
+                  },
+                  {
+                    id: "m2",                    title: "Colorist Expert",                    subtitle: "Specialist in balayage",                    detail: "8 years experience",                    imageSrc: "http://img.b2bpic.net/free-photo/pleased-young-female-barber-wearing-uniform-glasses-headband-holding-comb-hair-trimmer-air-looking-down-pretend-doing-haircut-client-isolated-red-background_141793-137002.jpg"
+                  }
+                ]
+              }
             ]}
+            title="Meet Our Stylists"
+            description="Our creative team members are passionate about bringing your vision to life."
           />
         </div>
 
         <div id="testimonials" data-section="testimonials">
-          <TestimonialCardSix
-            animationType="slide-up"
+          <TestimonialCardFive
             textboxLayout="default"
-            title="What Our Clients Say"
-            description="Join the community that loves our unique blend of services."
+            useInvertedBackground={false}
             testimonials={[
-              { id: "1", name: "Elena M.", handle: "@elena_m", testimonial: "Best haircut and latte in the city!", icon: Coffee },
-              { id: "2", name: "Marcus K.", handle: "@m_k_style", testimonial: "The atmosphere here is unmatched.", icon: ScissorIcon }
+              { id: "1", name: "Sarah Miller", date: "Jan 2025", title: "Great!", quote: "Loved the atmosphere.", tag: "Haircut", avatarSrc: "http://img.b2bpic.net/free-photo/portrait-attractive-young-woman-smiling_273609-12421.jpg", imageSrc: "http://img.b2bpic.net/free-photo/empty-wintertime-luxury-ski-resort_482257-102290.jpg?_wi=3", imageAlt: "happy salon customer" },
+              { id: "2", name: "James Chen", date: "Dec 2024", title: "Amazing", quote: "Very professional results.", tag: "Coloring", avatarSrc: "http://img.b2bpic.net/free-photo/young-girls-chatting-sofa_23-2147762523.jpg", imageSrc: "http://img.b2bpic.net/free-photo/high-angle-books-wooden-chair_23-2149678901.jpg?_wi=3", imageAlt: "happy salon customer" },
+              { id: "3", name: "Elena Rodriguez", date: "Nov 2024", title: "Wonderful", quote: "So relaxing experience.", tag: "Spa", avatarSrc: "http://img.b2bpic.net/free-photo/young-woman-smiling_1187-3773.jpg", imageSrc: "http://img.b2bpic.net/free-photo/crop-hairdresser-washing-hair-blonde_23-2147769799.jpg?_wi=3", imageAlt: "happy salon customer" },
+              { id: "4", name: "Marcus Thorne", date: "Oct 2024", title: "Perfect", quote: "Excellent work every time.", tag: "Style", avatarSrc: "http://img.b2bpic.net/free-photo/elegant-smiling-woman-is-trying-beautiful-necklace-posh-jewellery-shop_613910-20742.jpg", imageSrc: "http://img.b2bpic.net/free-photo/blonde-young-woman-taking-colored-pencil-from-case-wooden-table_23-2147889944.jpg?_wi=3", imageAlt: "happy salon customer" },
+              { id: "5", name: "Lisa Wang", date: "Sep 2024", title: "Amazing", quote: "The best in the city.", tag: "Cut", avatarSrc: "http://img.b2bpic.net/free-photo/woman-getting-her-hair-done-beauty-salon_23-2149167404.jpg", imageSrc: "http://img.b2bpic.net/free-photo/close-up-low-view-man-getting-haircut_23-2148224308.jpg?_wi=3", imageAlt: "happy salon customer" }
             ]}
+            title="Client Stories"
+            description="Read what our wonderful clients have to say about their experience at Ethereal Salon."
           />
         </div>
 
         <div id="pricing" data-section="pricing">
-          <PricingCardOne
+          <PricingCardEight
             animationType="slide-up"
-            textboxLayout="split"
-            title="Packages"
-            description="Experience our best offerings."
+            textboxLayout="default"
+            useInvertedBackground={false}
             plans={[
-              { id: "pr1", badge: "Essential", price: "$75", subtitle: "Cut & Brew", features: ["Expert Cut", "Premium Coffee", "Consultation"] }
+              { id: "p1", badge: "Popular", price: "$65", subtitle: "Basic Cut", buttons: [{ text: "Book Now" }], features: ["Consultation", "Wash", "Blowout"] },
+              { id: "p2", badge: "Deluxe", price: "$120", subtitle: "Color & Cut", buttons: [{ text: "Book Now" }], features: ["Root Touchup", "Precision Cut", "Styling"] },
+              { id: "p3", badge: "Premium", price: "$180", subtitle: "Spa Package", buttons: [{ text: "Book Now" }], features: ["Full Treatment", "Massage", "Cut & Style"] }
             ]}
+            title="Salon Services"
+            description="Transparent pricing for high-quality hair care."
           />
         </div>
 
         <div id="faq" data-section="faq">
-          <FaqBase
-            faqsAnimation="slide-up"
-            textboxLayout="split"
-            title="FAQs"
-            description="Everything you need to know about us."
+          <FaqDouble
+            textboxLayout="default"
+            useInvertedBackground={false}
             faqs={[
-              { id: "f1", title: "Do you take walk-ins?", content: "Yes, for coffee! For salon services, booking is recommended." }
+              { id: "f1", title: "Do I need an appointment?", content: "Yes, we recommend booking in advance." },
+              { id: "f2", title: "Do you accept walk-ins?", content: "Sometimes, but appointments are safer." },
+              { id: "f3", title: "Are you pet friendly?", content: "Service dogs only." }
             ]}
+            title="Common Questions"
+            description="Find answers to help you book and enjoy your visit."
+            faqsAnimation="slide-up"
           />
         </div>
 
         <div id="contact" data-section="contact">
-          <ContactCTA
+          <ContactCenter
+            useInvertedBackground={false}
+            background={{ variant: "gradient-bars" }}
             tag="Visit Us"
-            title="Ready for a Visit?"
-            description="Join us at Java Java Brews for your next style and coffee session."
-            buttons={[{ text: "Book Appointment" }]}
-            background={{ variant: "sparkles-gradient" }}
+            title="Schedule Your Visit"
+            description="Ready for a transformation? Get in touch with us to book your appointment."
           />
         </div>
 
         <div id="footer" data-section="footer">
-          <FooterLogoReveal
-            logoText="Java Java Brews"
-            leftLink={{ text: "Privacy Policy" }}
-            rightLink={{ text: "Terms of Service" }}
+          <FooterBaseCard
+            logoText="Ethereal Salon"
+            columns={[
+              {
+                title: "Navigate",                items: [
+                  { label: "About", href: "#about" },
+                  { label: "Services", href: "#services" }
+                ]
+              },
+              {
+                title: "Legal",                items: [
+                  { label: "Privacy Policy", href: "#" },
+                  { label: "Terms", href: "#" }
+                ]
+              }
+            ]}
           />
         </div>
       </ReactLenis>
